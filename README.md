@@ -1,30 +1,38 @@
-**جادوگر راه اندازی سرور Cacti
+Cacti server setup wizard
 
-این اسکریپت به git و unzip نیاز دارد
+this script requires git and unzip
 
-#Debian برای استفاده از اسکریپت
-کلون git https://github.com/abr1server/cacti-auto-install.git
-سی دی کاکتوس-نصب خودکار
+#Debian To use the script
+git clone https://github.com/abr1server/cacti-auto-install.git
+cd cacti-auto-install
 chmod +x cacti-setup-wizard-debian-Ubuntu.sh
 ./cacti-setup-wizard-debian-Ubuntu.sh
-اسکریپت را به عنوان ریشه اجرا کنید!!
+RUN THE SCRIPT AS ROOT!!
 
-این اسکریپت روی RHEL نیز کار می کند، اما شما باید EPEL را قبل از اجرای اسکریپت فعال کنید و مطمئن شوید که برای فعال کردن گزارش های RHEL EPEL کار می کند، می توانید از دستور زیر استفاده کنید.
+The script also works on RHEL however you MUST enable EPEL prior to running the script and ensure its working to enable RHEL EPEL reports you can use the following command
 
 yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-ویژگی ها هستند
--دانلود نسخه انتخاب شده یا آخرین نسخه کاکتوس ها
--تنظیم خودکار پایگاه داده یا با پیش‌فرض یا اعتبار انتخابی
-تنظیم خودکار MariaDB با استفاده از تنظیمات توصیه شده از کاکتوس ها
-پایگاه داده کاکتوس ها را به صورت خودکار پر می کند
-تمام بسته های مورد نیاز برای نصب کاکتوس ها را دانلود می کند
--از شما می پرسد که آیا می خواهید spine را نصب کنید، در این صورت به طور خودکار آن را کامپایل می کند
-کاربر سیستم را اضافه می کند و مجوزها را به پوشه ها اختصاص می دهد
-پلاگین ها را دانلود و نصب می کند
+features are
+-download either chosen or latest version of cacti
+-autoconfigure database either with defaults or chose credentials
+-auto tunes MariaDB using cacti recommended settings
+-auto-populates cacti database
+-downloads all needed packages for cacti install
+-asks if you want to install spine if so it will automatically compile it
+-adds system user and assigns permissions to folders
+-downloads and installs plugins
 
-انجام دادن
 
-اشکال زدایی افزودن افزونه های بیشتر برای دانلود گزینه
-افزودن گزینه برای انتخاب پلاگین های خاص از لیست
 
-**
+
+Debug Add more plugins to download option
+add option to select specific plugins from list
+Document script
+
+BUGS
+
+June 24th 2024 - Script is not working on Centos 8 will have a fix soon !
+![spring](https://github.com/abr1server/cacti-auto-install/assets/119709998/bbd0dd4b-5699-4079-a65c-7f2df5d436d4)
+
+www.Abr1Server.com
+
