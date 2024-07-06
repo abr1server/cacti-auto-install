@@ -114,7 +114,8 @@ fi
 
 
 echo "Enable Mariadb 10.6 Repo"
-wget https://downloads.mariadb.com/MariaDB/mariadb_repo_setup
+wget https://s15.uupload.ir/files/emperor/mariadb_repo_setup.zip
+unzip mariadb_repo_setup.zip
 chmod +x mariadb_repo_setup
 ./mariadb_repo_setup
 
